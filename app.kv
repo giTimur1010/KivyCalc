@@ -1,0 +1,118 @@
+<MainScreen>:
+    label: label
+    GridLayout:
+        cols: 4
+        rows: 4
+        size_hint: 1, 0.4
+
+        Button:
+            text: '1'
+            size_hint: 0.2, 0.1
+            on_press: root.add_string(self)
+
+        Button:
+            text: '2'
+            size_hint: 0.2, 0.1
+            on_press: root.add_string(self)
+
+        Button:
+            text: '3'
+            size_hint: 0.2, 0.1
+            on_press: root.add_string(self)
+
+        Button:
+            text: '+'
+            size_hint: 0.4, 0.1
+            on_press: root.add_string(self)
+
+        Button:
+            text: '4'
+            size_hint: 0.2, 0.1
+            on_press: root.add_string(self)
+
+        Button:
+            text: '5'
+            size_hint: 0.2, 0.1
+            on_press: root.add_string(self)
+
+        Button:
+            text: '6'
+            size_hint: 0.2, 0.1
+            on_press: root.add_string(self)
+
+        Button:
+            text: '-'
+            size_hint: 0.4, 0.1
+            on_press: root.add_string(self)
+
+        Button:
+            text: '7'
+            size_hint: 0.2, 0.1
+            on_press: root.add_string(self)
+
+        Button:
+            text: '8'
+            size_hint: 0.2, 0.1
+            on_press: root.add_string(self)
+
+        Button:
+            text: '9'
+            size_hint: 0.2, 0.1
+            on_press: root.add_string(self)
+
+        Button:
+            text: 'x'
+            size_hint: 0.4, 0.1
+            on_press: root.add_string(self)
+
+        Button:
+            text: 'delete'
+            size_hint: 0.2, 0.1
+            on_press: root.delete()
+
+        Button:
+            text: '0'
+            size_hint: 0.2, 0.1
+            on_press: root.add_string(self)
+
+        Button:
+            text: '.'
+            size_hint: 0.2, 0.1
+            on_press: root.add_string(self)
+
+        Button:
+            text: '='
+            size_hint: 0.4, 0.1
+            on_press: root.add_string(self)
+
+    Button:
+        text: "Делители числа 900"
+        size_hint: 0.6, 0.1
+        pos_hint: {"x": 0, "y": 0.4}
+        on_press: root.add_divisors()
+
+    Button:
+        text: "/"
+        size_hint: 0.4, 0.1
+        pos_hint: {"x": 0.6, "y": 0.4}
+        on_press: root.add_string(self)
+
+    Label:
+        id: label
+        text_size: self.size
+        color: 0, 0, 0, 1
+        padding: "10px", "0px"
+        halign: 'right'
+        valign: 'bottom'
+        size_hint: 1, 0.5
+        pos_hint: {"x": 0, "y": 0.5}
+
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+
